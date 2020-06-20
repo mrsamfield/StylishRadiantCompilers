@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Hello!</title>
+
+	<!-- import the webpage's stylesheet -->
+	<link rel="stylesheet" href="/style.css">
+
+	<!-- import the webpage's javascript file -->
+	<script src="/script.js" defer>
+
+	</script>
+</head>
+
+<body>
+	<h1 class="logo">Quizmaster</h1>
+
+	
+ 
+	<form class="user-setup">
+    
+    <p class="info">
+		<!-- Info goes here -->
+	  </p>
+
+		<!-- form need to get a few pieces of information 
+           - number of rounds
+           - questions per round 5 - 20
+           - topics (radio)
+           - difficulty
+       -->
+
+		<!-- slider for number of rounds -->
+		<input type="range" id="rounds" name="rounds"
+         min="1" max="5">
+      <label for="rounds">Number of rounds</label>
+      
+      <br/>
+
+      <!-- slider for questions per round -->
+      <input type="range" id="questions" name="questions"
+         min="1" max="20">
+      <label for="questions">Number of questions</label>
+      
+      <br/>
+
+      <!-- difficulty -->
+      <input type="range" id="difficulty" name="difficulty"
+         min="1" max="4">
+      <label for="difficulty">Difficulty (4 is random)</label>
+
+      <!-- select topics -->
+      <div class="mc-categories">
+        <li>
+          <input type="checkbox" id="any" name="any" value="any">
+          <label for="general-knowledge">Any (all categories)</label>
+        </li>
+        <li>
+          <input type="checkbox" id="general-knowledge" name="general-knowledge" value="9">
+          <label for="general-knowledge">General Knowledge</label>
+        </li>
+        <li>
+          <input type="checkbox" id="entertainment-books" name="entertainment-books" value="10">
+          <label for="entertainment-books">Entertainment: Books</label>
+        </li>
+        <li>
+          <input type="checkbox" id="entertainment-film" name="entertainment-film" value="11">
+          <label for="entertainment-film">Entertainment: Film</label>
+        </li>
+        <li>
+          <input type="checkbox" id="entertainment-music" name="entertainment-music" value="12">
+          <label for="entertainment-music">Entertainment: Music</label>
+        </li>
+        <li>
+          <input type="checkbox" id="entertainment-musicals-theatre" name="entertainment-musicals-theatre" value="13">
+          <label for="entertainment-musicals-theatre">Entertainment: Musicals &amp; Theatres</label>
+        </li>
+        <li>
+          <input type="checkbox" id="entertainment-television" name="entertainment-television" value="14">
+          <label for="Entertainment: Television">Entertainment: Television</label>
+        </li>
+        <li>
+          <input type="checkbox" id="entertainment-video-games" name="entertainment-video-games" value="15">
+          <label for="entertainment-video-games">Entertainment: Video Games</label>
+        </li>
+        <li>
+          <input type="checkbox" id="entertainment-board-games" name="entertainment-board-games" value="16">
+          <label for="entertainment-board-games">Entertainment: Board Games</label>
+        </li>
+        <li>
+          <input type="checkbox" id="science-nature" name="science-nature" value="17">
+          <label for="science-nature">Science &amp; Nature</label>
+        </li>
+        <li>
+          <input type="checkbox" id="science-computers" name="science-computers" value="18">
+          <label for="science-computers">Science: Computers</label>
+        </li>
+        <li>
+          <input type="checkbox" id="science-mathematics" name="science-mathematics" value="19">
+          <label for="science-mathematics">Science: Mathmatics</label>
+        </li>
+        <li>
+          <input type="checkbox" id="mythology" name="mythology" value="20">
+          <label for="mythology">Mythology</label>
+        </li>
+        <li>
+          <input type="checkbox" id="sports" name="sports" value="21">
+          <label for="sports">Sports</label>
+        </li>
+        <li>
+          <input type="checkbox" id="geography" name="geography" value="22">
+          <label for="geography">Geography</label>
+        </li>
+        <li>
+          <input type="checkbox" id="history" name="history" value="23">
+          <label for="history">History</label>
+        </li>
+        <li>
+          <input type="checkbox" id="politics" name="politics" value="24">
+          <label for="politics">Politics</label>
+        </li>
+        <li>
+          <input type="checkbox" id="celebrities" name="celebrities" value="26">
+          <label for="celebrities">Celebrities</label>
+        </li>
+        <li>
+          <input type="checkbox" id="animals" name="animals" value="27">
+          <label for="animals">Animals</label>
+        </li>
+        <li>
+          <input type="checkbox" id="vehicles" name="vehicles" value="28">
+          <label for="vehicles">Vehicles</label>
+        </li>
+        <li>
+          <input type="checkbox" id="entertainment-comics" name="entertainment-comics" value="29">
+          <label for="entertainment-comics">Entertainment: Comics</label>
+        </li>
+        <li>
+          <input type="checkbox" id="science-gadgets" name="science-gadgets" value="30">
+          <label for="science-gadgets">Science: Gadgets</label>
+        </li>
+        <li>
+          <input type="checkbox" id="entertainment-animation" name="entertainment-animation" value="32">
+          <label for="entertainment-animation">Entertainment: Cartoon &amp; Animations</label>
+        </li>
+        <li>
+          <input type="checkbox" id="entertainment-anime" name="entertainment-anime" value="31">
+          <label for="entertainment-anime">Entertainment: Japanese Anime &amp; Manga</label>
+        </li>
+      </div>
+      <!-- Submit form button -->
+      
+       <button class="submit-button" type="button" onclick="setParams()">quiz time!</button> 
+
+    </form>
+  
+  <section class="quiz-display hidden">
+     <div class="slider">
+       <!-- content goes here  -->
+     </div>
+  </section>
+   
+  <footer>
+    <a href="#" class="previous">⏪</p>
+    <a href="#" class="next">⏩</p>
+  </footer>
+  </body>
+</html>
